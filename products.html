@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Flavour Meats</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">Flavour<span>Meats</span></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#delivery">Delivery</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <h2 class="section-title">Our Products</h2>
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('https://lafarms.co.za/cdn/shop/products/Angus_Boerewors-002_750x.jpg?v=1548137456');"></div>
+                    <div class="product-info">
+                        <h3 class="product-title">Classic BBQ Sausages</h3>
+                        <p class="product-price">₹299 / kg</p>
+                        <p class="product-description">Our signature blend of spices and premium meat makes these sausages a crowd favorite.</p>
+                        <div class="quantity-controls" style="display: none;" id="controls-1">
+                            <button class="quantity-btn" onclick="updateQuantity('product-1', -1)">-</button>
+                            <span class="quantity-display" id="quantity-1">1</span>
+                            <button class="quantity-btn" onclick="updateQuantity('product-1', 1)">+</button>
+                            <span class="current-price" id="price-1">₹299</span>
+                        </div>
+                        <button class="add-to-cart-btn" id="button-1" onclick="addToCart('product-1', 'Classic BBQ Sausages', 299)">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('https://hyperbutchery.co.za/wp-content/uploads/2021/07/TRADITIONAL-BOEREWORS.jpg');"></div>
+                    <div class="product-info">
+                        <h3 class="product-title">Traditional African Boerewors</h3>
+                        <p class="product-price">₹399 / kg</p>
+                        <p class="product-description">Authentic African sausage with a perfect blend of spices and coarse texture.</p>
+                        <div class="quantity-controls" style="display: none;" id="controls-2">
+                            <button class="quantity-btn" onclick="updateQuantity('product-2', -1)">-</button>
+                            <span class="quantity-display" id="quantity-2">1</span>
+                            <button class="quantity-btn" onclick="updateQuantity('product-2', 1)">+</button>
+                            <span class="current-price" id="price-2">₹399</span>
+                        </div>
+                        <button class="add-to-cart-btn" id="button-2" onclick="addToCart('product-2', 'Traditional African Boerewors', 399)">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('https://betterthanabistro.com/cdn/shop/products/PorkChop-BonelessCenterCutPremium-All-Natural_1640x1640@2x.jpg?v=1642008492');"></div>
+                    <div class="product-info">
+                        <h3 class="product-title">Premium Pork Cuts</h3>
+                        <p class="product-price">₹499 / kg</p>
+                        <p class="product-description">Tender, juicy pork cuts perfect for grilling, roasting, or your favorite recipes.</p>
+                        <div class="quantity-controls" style="display: none;" id="controls-3">
+                            <button class="quantity-btn" onclick="updateQuantity('product-3', -1)">-</button>
+                            <span class="quantity-display" id="quantity-3">1</span>
+                            <button class="quantity-btn" onclick="updateQuantity('product-3', 1)">+</button>
+                            <span class="current-price" id="price-3">₹499</span>
+                        </div>
+                        <button class="add-to-cart-btn" id="button-3" onclick="addToCart('product-3', 'Premium Pork Cuts', 499)">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('https://mamiyarskitchen.com/wp-content/uploads/2022/02/Kheema.jpg');"></div>
+                    <div class="product-info">
+                        <h3 class="product-title">Quality Mince</h3>
+                        <p class="product-price">₹349 / kg</p>
+                        <p class="product-description">Freshly ground mince with ideal fat content for burgers, meatballs, and more.</p>
+                        <div class="quantity-controls" style="display: none;" id="controls-4">
+                            <button class="quantity-btn" onclick="updateQuantity('product-4', -1)">-</button>
+                            <span class="quantity-display" id="quantity-4">1</span>
+                            <button class="quantity-btn" onclick="updateQuantity('product-4', 1)">+</button>
+                            <span class="current-price" id="price-4">₹349</span>
+                        </div>
+                        <button class="add-to-cart-btn" id="button-4" onclick="addToCart('product-4', 'Quality Mince', 349)">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('https://www.medinameats.co.za/cdn/shop/products/wbtchisaus_c7d1b06a-8a53-4151-931a-6d9489acccd0_720x.jpg?v=1582366953');"></div>
+                    <div class="product-info">
+                        <h3 class="product-title">Spicy Chili Sausages</h3>
+                        <p class="product-price">₹329 / kg</p>
+                        <p class="product-description">For those who like it hot! Our spicy chili sausages pack a flavorful punch.</p>
+                        <div class="quantity-controls" style="display: none;" id="controls-5">
+                            <button class="quantity-btn" onclick="updateQuantity('product-5', -1)">-</button>
+                            <span class="quantity-display" id="quantity-5">1</span>
+                            <button class="quantity-btn" onclick="updateQuantity('product-5', 1)">+</button>
+                            <span class="current-price" id="price-5">₹329</span>
+                        </div>
+                        <button class="add-to-cart-btn" id="button-5" onclick="addToCart('product-5', 'Spicy Chili Sausages', 329)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mini Cart -->
+    <div class="mini-cart" id="mini-cart" style="display: none;" onclick="openCart()">
+        <span class="material-icons">shopping_cart</span>
+        <span class="mini-cart-total" id="mini-cart-total">₹299.00</span>
+        <span>|</span>
+        <span>View Cart</span>
+    </div>
+
+    <!-- Bottom Sheet Cart Modal -->
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>Your Order</h2>
+                <span class="close-cart" onclick="closeCart()">×</span>
+            </div>
+            <div class="cart-items" id="cart-items">
+                <!-- Cart items will be added here dynamically -->
+            </div>
+            <div class="cart-total" id="cart-total">Total: ₹0.00</div>
+            
+            <div class="address-form">
+                <h3>Delivery Address</h3>
+                <div class="form-group">
+                    <label for="address">Full Address</label>
+                    <textarea id="address" rows="3" placeholder="Enter your complete address. You can also share your location via WhatsApp if needed."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="notes">Delivery Notes (optional)</label>
+                    <input type="text" id="notes" placeholder="Any special instructions for delivery">
+                </div>
+            </div>
+            
+            <div class="checkout-options">
+                <button class="checkout-btn cod-btn" onclick="checkout('cod')">
+                    <span class="material-icons">payments</span>
+                    Cash on Delivery
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Flavour Meats</h3>
+                    <p>Providing the finest quality meats to our community.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <div class="contact-item">
+                        <span class="material-icons">phone</span>
+                        <a href="https://wa.me/918264457734" target="_blank">+91 82644 57734</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="material-icons">email</span>
+                        <a href="mailto:tashinganyoni07@gmail.com">tashinganyoni07@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="material-icons">location_on</span>
+                        <span>23 Palm Meadows, Kharar</span>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Business Hours</h3>
+                    <p>Monday - Saturday: 9am - 8pm</p>
+                    <p>Sunday: 10am - 6pm</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Flavour Meats. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/cart.js"></script>
+</body>
+</html>
